@@ -49,6 +49,9 @@
 
         var a = t("3"), s = t("6"), c = t("2"), u = function (t) {
             if (t = void 0 !== t ? t : {}, this.renderer = new THREE.WebGLRenderer({
+                  //selmen
+                document.body.appendChild( main.createButton( render ) );
+                renderer.vr.enabled=true;
                 alpha: !0,
                 antialias: !0,
                 canvas: t.canvas || document.querySelector("canvas"),
@@ -62,9 +65,7 @@
                 window.mouseX = t.pageX / WIDTH * 2 - 1, window.mouseY = 1 - t.pageY / HEIGHT * 2
             }), this.config.fps && (this.fpsCounter = new c, this.counter = document.createElement("div"), document.querySelectorAll("body")[0].appendChild(this.counter), this.counter.setAttribute("style", "position:absolute;top:20px;left:100px;color:#ff00ff;display:block !important;z-index:999999;")), i(this), this.config.logCalls && this.initDrawCallsCounter()
         };
-        //selmen
-        document.body.appendChild( main.createButton( render ) );
-        renderer.vr.enabled=true;
+      
         u.prototype = {
             initDrawCallsCounter: function () {
                 var t = $("<div id='dc'></div>");
