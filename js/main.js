@@ -306,7 +306,7 @@
                         var t = this.object.position;
                         r.copy(t).sub(this.target), r.applyQuaternion(l), e = Math.atan2(r.x, r.z), n = Math.atan2(Math.sqrt(r.x * r.x + r.z * r.z), r.y), e += a, n += o, this.object.theta = e = Math.max(this.minAzimuthAngle, Math.min(this.maxAzimuthAngle, e)), n = Math.max(this.minPolarAngle, Math.min(this.maxPolarAngle, n)), this.object.phi = n = Math.max(i, Math.min(Math.PI - i, n));
                         var d = r.length() * s;
-                        return d = Math.max(this.minDistance, Math.min(this.maxDistance, d)), this.target.add(c), r.x = d * Math.sin(n) * Math.sin(e), r.y = d * Math.cos(n), r.z = d * Math.sin(n) * Math.cos(e), r.applyQuaternion(f), t.copy(this.target).add(r), this.object.lookAt(this.target), this.enableDamping === !0 ? (a *= 1 - this.dampingFactor, o *= 1 - this.dampingFactor) : (a = 0, o = 0), s = 1, c.set(0, 0, 0), !!(u || h.distanceToSquared(this.object.position) > i || 8 * (1 - p.dot(this.object.quaternion)) > i) && (h.copy(this.object.position), p.copy(this.object.quaternion), u = !1, !0)
+                        return d = Math.max(this.minDistance, Math.min(this.maxDistance, d)), this.target.add(c), r.x = d * Math.sin(n) * Math.sin(e), r.y = d * Math.cos(n), r.z = d * Math.sin(n) * Math.cos(e), r.applyQuaternion(f), t.copy(this.target).add(r), this.enableDamping === !0 ? (a *= 1 - this.dampingFactor, o *= 1 - this.dampingFactor) : (a = 0, o = 0), s = 1, c.set(0, 0, 0), !!(u || h.distanceToSquared(this.object.position) > i || 8 * (1 - p.dot(this.object.quaternion)) > i) && (h.copy(this.object.position), p.copy(this.object.quaternion), u = !1, !0)
                     }
                 }()
             }
@@ -7801,7 +7801,7 @@
             }, initCamera: function () {
                 var t = 120;
                 Math.tan(i.CAMERA_ANGLE) * Math.sqrt(2 * Math.pow(t, 2));
-                this.camera = new o(30, window.innerWidth / window.innerHeight, 10, 400), this.camera.position.set(80, 140, 80), this.camera.lookAt(new THREE.Vector3), this.camera.position.y = 200
+                this.camera = new o(30, window.innerWidth / window.innerHeight, 10, 400), this.camera.position.set(80, 140, 80), this.camera.position.y = 200
             }, refreshChunkScene: function () {
                 this.chunkScene.forEachChunk(function (t, e, n) {
                     var r = this.gridCoords.x + e, i = this.gridCoords.y + n, o = this.table.getChunkData(r, i);
@@ -8270,7 +8270,7 @@
                     n *= e, t += n, t = Math.min(Math.max(t + n, 0), 1e3), this.targetHeight = THREE.Math.mapLinear(t, 0, 1e3, 30, 140), r && (this.position.y = this.targetHeight)
                 }
             }(), update: function () {
-                this.position.y += .05 * (this.targetHeight - this.position.y), this.lookAt(i)
+                this.position.y += .05 * (this.targetHeight - this.position.y)
             }
         }), e.exports = o
     }, {}],
