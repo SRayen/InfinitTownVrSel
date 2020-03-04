@@ -109,9 +109,7 @@
          */
         var init = function(options) {
             if (options = void 0 !== options ? options : {}, this.renderer = new THREE.WebGLRenderer({
-                //selmen
-                document.body.appendChild( main.createButton( render ) );
-                renderer.vr.enabled=true;
+                
                 alpha : true,
                 antialias : true,
                 canvas : options.canvas || document.querySelector("canvas"),
@@ -166,6 +164,9 @@
             if (this.config.logCalls) {
                 this.initDrawCallsCounter();
             }
+            //selmen
+        document.body.appendChild( main.nice.createButton( render ) );
+        renderer.vr.enabled=true;
         };
         init.prototype = {
             initDrawCallsCounter : function() {
@@ -18202,7 +18203,7 @@
                 Math.tan(p.CAMERA_ANGLE) * Math.sqrt(2 * Math.pow(psisq, 2));
                 this.camera = new PerspectiveCamera(30, window.innerWidth / window.innerHeight, 10, 400);
                 this.camera.position.set(80, 140, 80);
-                //this.camera.lookAt(new THREE.Vector3);
+               // this.camera.lookAt(new THREE.Vector3);
                 /** @type {number} */
                 this.camera.position.y = 200;
             },
