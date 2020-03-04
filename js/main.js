@@ -64,7 +64,7 @@
         };
         //selmen
         document.body.appendChild( main.createButton( render ) );
-        render.vr.enabled=true;
+        renderer.vr.enabled=true;
         u.prototype = {
             initDrawCallsCounter: function () {
                 var t = $("<div id='dc'></div>");
