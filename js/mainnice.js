@@ -165,7 +165,7 @@
                 this.initDrawCallsCounter();
             }
             //selmen
-        document.body.appendChild(mainnice.createButton(renderer));
+        //document.body.appendChild(mainnice.createButton(renderer));
         renderer.vr.enabled=true;
         };
         init.prototype = {
